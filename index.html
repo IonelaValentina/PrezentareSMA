@@ -34,6 +34,7 @@
         <div id="planificatori" class="hidden sub-detail">
           <p>Deciziile agenţilor deliberativi se bazează pe planificatoare, ceea ce face ca activitatea de realizare a planificatorului 
             să fie importantă. În general, planificatorul este un program care generează alte programe sau secvenţe de cod care reprezintă acţiuni (v. fig. 2.2) [19].</p>
+          <br>
           <p>Această arhitectură, conţine o bibliotecă de planuri predefinite şi preasamblate. Fiecare agent are acces la toate planurile şi deci alege cel mai bun plan.</p>
           <br>
           <figure>
@@ -47,6 +48,7 @@
         <div id="bdi" class="hidden sub-detail">
           <p>Arhitectura BDI are la bază ideea că pentru a face faţă unor situaţii complexe 
             este bine să se creeze agenţi care raţionează în aceeaşi manieră ca şi oamenii.</p>
+          <br>
           <ul class="bdi-list">
             <p>Operaţiile de bază ale agenţilor BDI sunt: </p>
             <p><strong>● <i>convingerile</i></strong> – care reprezintă cunoştinţele despre agent şi despre lumea înconjurătoare; </p>
@@ -74,6 +76,7 @@
             care să transforme percepţiile din mediu în convingeri. Mai departe sunt generate cerinţele pe baza convingerilor 
             curente şi ale intenţiilor, după care intenţiile sunt aduse la zi pe baza noilor cerinţe, convingeri şi intenţii. 
             După aceasta, este ales cel mai bun plan şi modulul de execuţie îl pune în aplicare.</p>
+          <br>
           <p>În timpul obţinerii unei intenţii sunt create noi cerinţe şi evident noi intenţii. Acest fapt pare să fie un 
             dezavantaj dacă agentul nu garantează că fiecare intenţie persistă atâta timp cât este obţinută. În acest caz agentul 
             ar sări de la o intenţie la alta fără să obţină nimic. Oricum acest mecanism împiedică un agent de a sta agăţat de o intenţie, 
@@ -90,6 +93,7 @@
             BDI este definită ca o logică multimodală compusă din trei operatori modali: <i>Belifs</i> (B), <i>Goals</i> (G) şi <i>Intentions</i> (I). 
             Acest cadru teoretic are câteva neajunsuri mai ales la implementare. Principala problemă este găsirea unui limbaj adecvat, care poate reprezenta 
             rezonabil logica din spatele arhitecturii BDI. În acest sens au fost chiar create programe speciale, dedicate acestui scop – <i>AgentSpeak</i> (L) [24].</p>
+          <br>
           <p>Cu toate că arhitectura BDI pare să fie potrivită pentru a implementa agenţi complecşi, trebuiesc luate în considerare şi câteva dezavantaje:
           <p>→ este dificilă şi complex de programat, deoarece modelul formal din spatele arhitecturii este complex;</p>
           <p>→ este dificil să se găsească raportul optim între nivelele de proactivitate şi reactivitate;</p>
@@ -98,7 +102,7 @@
           <p>→ este dificil de ales intenţia potrivită deoarece, de multe ori, sunt multe care par sau chiar sunt adecvate;</p>
           <p>→ există o lipsă acută de unelte de dezvoltare (mai mult, cele existente nu implementează facil modelul BDI);</p>
           <p>→ arhitectura are o slabă explicitare a aspectelor multiagent.</p>
-
+          <br>
           <p>Cu toate acestea există câteva implementări de succes ale agenţilor BDI, ca de exemplu:</p>
           <p>● PRS – Procedural Reasoning System;</p>
           <p>● DMARS – o evoluţie a PRS;</p>
@@ -113,7 +117,7 @@
             concentrează pe norme (<b>norma</b> – <i>norm</i> este o comportare ideală sau recomandată dar care se deosebeşte de <b>regulă</b> – <i>rule</i> 
             pentru că nu impune o obligaţie; se poate considera că regulile sunt nişte norme impuse) pentru a direcţiona cooperarea dintre agenţi. 
             Pe lângă această abordare socială, agenţii EDA au multe concepte BDI.</p>
-        
+          <br>
           <p>Arhitectura EDA este compusă din următoarele comportamente: </p>
           <p>● epistemic (E) sau cognitiv – reprezintă cunoştinţele despre mediul înconjurător (componenta B de la BDI);</p>
           <p>● deontologic (D) – conţine comportarea (planurile). În plus mai conţine drepturi şi obligaţii;</p>
@@ -126,8 +130,10 @@
           <br>
           <p>Figura 2.6 prezintă cum operează agenţii EDA. Literele A, D şi E reprezintă componentele amintite. Setul de acţiuni ce urmează a fi executat 
             (reprezentat printr-un plan) este ales dintr-un set de planuri posibile bazate pe cunoştinţe (starea epistemică) şi normele axiologice.</p>
+          <br>
           <p>Un agent EDA trebuie să filtreze informaţia captată de senzori. După ce informaţia este transformată într-o formă potrivită pentru agent, 
             ea este filtrată în concordanţă cu valorile date de componenta axiologică. Aceste valori vor restrânge numărul de planuri posibile.</p>
+          <br>
           <p>Alegerea comportamentului se face într-o manieră asemănătoare cu cea implementată de BDI. Specificul introdus de EDA se reflectă în 
             obligaţiile şi drepturile care influenţează alegerea planului de lucru. Pentru a reprezenta aspectul normativ al comportării agenţilor 
             se utilizează logica deontologică care este o logică modală pentru obligaţii, permisiuni şi prohibiţii. Utilizarea acestui tip de logică 
@@ -135,7 +141,7 @@
           <p>● distincţia dintre obligaţii şi necesităţi;</p>
           <p>● expresia obligaţiilor generale şi specifice;</p>
           <p>● exprimarea sancţiunii când se încalcă o regulă (ce trebuie făcut).</p>
-
+          <br>
           <p>Cu toate acestea EDA pare să fie arhitectura promisă şi ar fi indicat să fie utilizată în probleme complexe care necesită un comportament social. 
             Există însă şi câteva dezavantaje:</p>
           <p>→ arhitectura EDA este foarte complexă;</p>
@@ -169,7 +175,6 @@
       <p>Agenţii reactivi sunt cunoscuţi şi ca agenţi comportamentali deoarece ei presupun existenţa unor comportamente de bază sau secvenţe 
         de acţiuni care se execută concomitent pentru a forma cel mai de jos nivel al inteligenţei. Aceste comportamente sunt utilizate de altele 
         mai complexe care crează un nivel superior.</p>
-
 
       <ul class="arch-list">
         <p>Cea mai cunoscută arhitectură este: </p>
@@ -205,14 +210,13 @@
           <br>
           <p>Există multe astfel de implementări în practică, şi care se dovedesc mai fiabile şi mai funcţionale decât cele bazate pe inteligenţa artificială. 
             Toate aceste implementări se bazează pe aceeaşi idee de a avea un comportament simplu fără o reprezentare a cunoştinţelor.</p>
-
+          <br>
           <p>Cu toate că agenţii reactivi sunt simplii, pot fi proiectaţi elegant şi economic. Totuşi aceştia au şi câteva dezavantaje:</p>
           <p>→ sunt necesare multe informaţii de la senzori pentru luarea unei decizii;</p>
           <p>→ senzorii oferă doar o informaţii locale şi imediate (absenţa unui model al mediului evită obţinerea oricărei viziuni asupra viitoarelor acţiuni);</p>
           <p>→ această abordare nu face posibilă învăţarea şi evoluţia agenţilor;</p>
           <p>→ comportamentul complex al agenţilor reactivi apare pe neaşteptate şi este dificil de a-l modela şi previziona. În consecinţă nu este disponibilă nicio metodologie care să ajute şi să conducă la apariţia unor comportamente previzibile;</p>
           <p>→ când numărul comportamentelor creşte este foarte greu de înţeles toate interacţiunile implicate.</p>
-
 
         </div>
       </ul>
