@@ -5,8 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Arhitectura Agentului</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<nav class="navbar hidden" id="main-nav">
+  <ul>
+    <li><a href="#card-deliberativi">Deliberativi</a></li>
+    <li><a href="#card-reactivi">Reactivi</a></li>
+    <li><a href="#card-hibrizi">Hibrizi</a></li>
+  </ul>
+</nav>
 
 <!-- HERO SECTION -->
 <header class="hero" id="top">
@@ -17,11 +31,11 @@
   </div>
 </header>
 
-<section id="cards-section" class="cards-column">
+<section id="cards-section" class="cards-column hidden">
   <h2 class="section-title">Tipuri de arhitecturi</h2>
   <br>
   <!-- Card 1: Deliberativi -->
-  <div class="card-vertical">
+  <div class="card-vertical" id="card-deliberativi">
     <h3>AGENȚI DELIBERATIVI</h3>
     <button onclick="toggleDetails('deliberativi-details')">Află mai multe</button>
     <div id="deliberativi-details" class="hidden">
@@ -155,7 +169,7 @@
   </div>
 
   <!-- Card 2: Reactivi -->
-  <div class="card-vertical">
+  <div class="card-vertical" id="card-reactivi">
     <h3>AGENȚI REACTIVI</h3>
     <button onclick="toggleDetails('reactivi-details')">Află mai multe</button>
     <div id="reactivi-details" class="hidden">
@@ -224,7 +238,7 @@
   </div>
 
   <!-- Card 3: Hibrizi -->
-  <div class="card-vertical">
+  <div class="card-vertical" id="card-hibrizi">
     <h3>AGENȚI HIBRIZI (Arhitecturi pe nivele/straturi - <i>layers</i>)</h3>
     <button onclick="toggleDetails('hibrizi-details')">Află mai multe</button>
     <div id="hibrizi-details" class="hidden">
@@ -269,6 +283,8 @@
   </div>
 </section>
 
+<!-- Buton SUS -->
+<a href="#top" class="back-to-top">↑</a>
 
 <script src="script.js"></script>
 </body>
